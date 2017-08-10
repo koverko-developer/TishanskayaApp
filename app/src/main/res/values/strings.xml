@@ -4,7 +4,143 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="bar_text">Студия Ларисы Тишанской</string>
+    <string name="toolbar_course">Курсы-онлайн</string>
+    <string name="toolbar_disease">Главная</string>
+    <string name="toolbar_about">Психолог</string>
+    <string name="about">Психолог, Гештальт-терапевт, Гипнолог</string>
+    <string name="next">ДАЛЕЕ</string>
+    <string name="pre">НАЗАД</string>
+    <string name="done">ГОТОВО</string>
+    <string name="free">Бесплатно</string>
+    <string name="buy_course">Купить курс</string>
+    <string name="description_course">Подробнее</string>
+    <string name="text_null_unwind">Это 8 шагов для полного успокоения. В конце Вас ждет небольшой сюрприз!</string>
+    <string name="title_null_unwind">Для продолжения нажмите ДАЛЕЕ</string>
+    <string name="unwind_text_end">А вот и сюрприз!! Сотрите защитный слой и получите изображение.</string>
+    <string name="toast_error_test">Нужно выбрать хотя бы один ответ...</string>
+    <string name="test">ТЕСТ</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--  STRING FOR PA -->
+    <string name="pa_name">Панические атаки</string>
+    <string name="pa_descr">Паническая атака представляет собой необъяснимый, мучительный для больного  приступ тяжёлой тревоги, сопровождаемый страхом. Панические атаки могут быть симптомами феохромоцитомы, фобий, соматоформных дисфункций и т.д</string>
+    <string name="pa_price">1.66</string>
+
+    <string name="pa_unwind_text1">текст1</string>
+    <string name="pa_unwind_description1">описание1</string>
+
+    <string name="pa_unwind_text2">текст2</string>
+    <string name="pa_unwind_description2">описание2</string>
+
+    <string name="pa_unwind_text3">текст3</string>
+    <string name="pa_unwind_description3">описание3</string>
+
+    <string name="pa_unwind_text4">текст4</string>
+    <string name="pa_unwind_description4">описание4</string>
+
+    <string name="pa_unwind_text5">текст5</string>
+    <string name="pa_unwind_description5">описание5</string>
+
+    <string name="pa_unwind_text6">текст6</string>
+    <string name="pa_unwind_description6">описание6</string>
+
+    <string name="pa_unwind_text7">текст7</string>
+    <string name="pa_unwind_description7">описание7</string>
+
+    <string name="pa_unwind_text8">текст8</string>
+    <string name="pa_unwind_description8">описание8</string>
+
+
+    <!--  STRING FOR PA -->
+    <string name="paa_name">Панические атаки \nс агорафобией</string>
+    <string name="paa_descr">Агорафобия является настоящим заболеванием, имеющим как психическую, так и соматическую основу. В большинстве случаев агорафобия формируется после возникновения панических атак. В отдельных ситуациях возможно возникновение агорафобии без панических атак на фоне тревоги.</string>
+    <string name="paa_price">2.66</string>
+
+    <!--  STRING FOR PA -->
+    <string name="depressia_name">Депрессия</string>
+    <string name="depressia_descr">Чаще всего депрессия развивается на фоне стресса или длительно травмирующей ситуации. Нередко депрессивные расстройства скрываются под маской плохого настроения, особенностей характера. Для того чтобы не допустить тяжелых последствий, важно разобраться, как и почему возникает депрессия.</string>
+    <string name="depressia_price">1.66</string>
+
+    <!--  STRING FOR PA -->
+    <string name="sex_name">Сексуальные расстройства</string>
+    <string name="sex_descr">Часто влечение снижается вследствие комплекса причин – хронический стресс, утомляемость, повышенные нагрузки, неумение расслабиться, отвлечься, напряженные отношения в паре, затаенные обиды и конфликты</string>
+    <string name="sex_price">3.20</string>
+
+    <!--  STRING FOR PA -->
+    <string name="mono_name">Монофобические \nрасстройства</string>
+    <string name="mono_descr">Установлено, что у людей, страдающих фобическими расстройствами, наблюдается увеличение уровня катехоламинов, блокада рецепторов, регулирующих метаболизм ГАМК, чрезмерная стимуляция бета-адренергических рецепторов и некоторые другие нарушения.</string>
+    <string name="mono_price">5.33</string>
+
+
+    <string name="title_activity_about">Лариса Тишанская</string>
+    <string name="phone">+375 29 650-01-55</string>
+    <string name="email">larisa.tishanskaya@yandex.ru</string>
+    <string name="address">г. Минск, проспект Газеты Правда, 30</string>
+    <string name="about_text">Обо мне</string>
+    <string name="about_text_1">Здравствуйте! Я - психолог, психотерапевт, сексолог.
+    \n Я работаю со взрослыми и детьми, помогая преодолевать трудности, которые встречаются в жизни людей: поиск себя, потери и расставания, непонимание других, страхи и депрессия, одиночество и потеря смысла жизни.. Работаю с семейными парами - помогаю им научиться выражать свои чувства, защищать друг друга от ненужной боли. В том числе с парами у которых нарушена сексуальная функция...</string>
+    <string name="about_text_2">ПОДРОБНЕЕ</string>
+    <string name="about_text_3">Мои достижения</string>
+    <string name="about_text_4">Здравствуйте! Я - психолог, психотерапевт, сексолог.
+\nЯ работаю со взрослыми и детьми, помогая преодолевать трудности, которые встречаются в жизни людей: поиск себя, потери и расставания, непонимание других, страхи и депрессия, одиночество и потеря смысла жизни.. Работаю с семейными парами - помогаю им научиться выражать свои чувства, защищать друг друга от ненужной боли. В том числе с парами у которых нарушена сексуальная функция.
+\nЯ так же имею успешный опыт работы с клиентами, страдающими психосоматическими заболеваниями.
+\nЗа годы работы я убедилась в том, что любая проблема, которая встретилась нам на пути, имеет решение, и для этого в нас есть все, просто нужно обратиться к себе самому и с помощью квалифицированного психолога найти свои ответы. При этом я могу обещать, что все мое внимание и уважение, весь мой житейский и профессиональный опыт, будут Вам опорой на сложной дороге поиска и выбора.
+\nВладею техниками гипноза и краткосрочной психотерапии (8-12 сессий)
+\nОбучающимся в гештальт программе часы терапии засчитываются при сертификации.
+\nО моих образованиях и дипломах, сертификатах - можно узнать здесь в соответствующих разделах</string>
+
+    <string name="sertificate_1_name">Киргизско-Российский \n(Славянский) Университет</string>
+    <string name="sertificate_2_name">Киргизско-Российский \n(Славянский) Университет</string>
+    <string name="sertificate_3_name">Работа с детьми и подростками в гештальт-терапии</string>
+    <string name="sertificate_4_name">Обучение гештальттерапевтов</string>
+    <string name="sertificate_5_name">Сертификат гештальт-терапевта</string>
+    <string name="sertificate_6_name">"Развитие эмоционально-волевой сферы учащихся" (уверенности в себе, коррекции тревожности,управлении поведением)</string>
+    <string name="sertificate_7_name">Сексология в гештальт подходе</string>
+    <string name="sertificate_8_name">Групповая терапия и тренинг</string>
+    <string name="sertificate_9_name">Клинический гипноз в современной медицинской и психологической практики</string>
+    <string name="sertificate_10_name">Лицензия на окозание психологической помощи</string>
+
+    <string name="sertificate_1_descrirtion">Специальность: Психолог, предподаватель психологии \nКвалификация: Психолог \nГоды обучения: 2007 - 2010</string>
+    <string name="sertificate_2_descrirtion">Специальность: Юриспруденция \nКвалификация: Юрист \nГоды обучения: 1996 - 2000</string>
+    <string name="sertificate_3_descrirtion">Выдан: Общество развития гештальт-терапи в Кыргызстане \nГод получения: 2010</string>
+    <string name="sertificate_4_descrirtion">Выдан: Московский институт гештальта и психодраммы \nГод получения: 2011</string>
+    <string name="sertificate_5_descrirtion">Выдан: Московский гештальт институт \nГод получения: 2013</string>
+    <string name="sertificate_6_descrirtion">Выдан: Витебский областной институт развития образования \nГод получения: 2011</string>
+    <string name="sertificate_7_descrirtion">Выдан: Московский гештальт институт \nГод получения: 2015</string>
+    <string name="sertificate_8_descrirtion">Выдан: Белорусская ассоциация психотерапевтов \nГод получения: 2013</string>
+    <string name="sertificate_9_descrirtion">Выдан: Институт психотерапии и медицинской психологии РПА им. Б.Д. Карвасарского \nГод получения: 2016</string>
+    <string name="sertificate_10_descrirtion">Выдан: Министерство Здравохраниения Республики Беларусь \nГод получения: 2016</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="trening_1_name">Школа отношений. \nКак сделать пару семьей.</string>
+    <string name="trening_1_description">Этот тренинг для вас, если: Вы хотите создать семью, в которой будет теплота, доброта и понимание? Хотите, чтобы ваш союз длился долго? Мечтаете о любви, уважении, взаимопонимании в семейных отношениях?</string>
+    <string name="trening_1_price">10.79</string>
+
+    <string name="trening_2_name">Еженедельная группа психологической поддержки.</string>
+    <string name="trening_2_description">Если Вы устали работать над собой, развиваться, идти в перед, возможно пришло время остановиться.... И получить то, в чем нуждается каждый человек на свете, поддержку и принятие Вас таким, какой Вы есть... ...</string>
+    <string name="trening_2_price">5.34</string>
+
+
+    <string name="trening_3_name">Семинар Арт-терапия в работе психолога</string>
+    <string name="trening_3_description">Семинар расчитан на широкий круг специалистов: психологов, психотерапевтов, врачей, педагогов, студентов старших курсов психологических факультетов. Его цель продемонстрировать возможности использования ...</string>
+    <string name="trening_3_price">20.07</string>
+
+    <string name="trening_4_name">Группа по интуитивному питанию.</string>
+    <string name="trening_4_description">Вы устали сражаться с лишними килограммами? Вы не хотите больше мучить свой организм жесткими диетами? Вы не готовы рисковать своим здоровьем, принимая «волшебные таблетки» с непредсказуемым побочным действием? ...</string>
+    <string name="trening_4_price">15.5</string>
+
+    <string name="trening_5_name">Тренинг-группа «Я-женщина. Я хочу счастья!»</string>
+    <string name="trening_5_description">Вы хотите создать семью, в которой будет теплота, доброта и понимание? Вы хотите создать семью… Вы уже слабо верите, что можно что-то создать… Тогда мы ждем Вас в нашей группе, в которой мы вместе будем ..</string>
+    <string name="trening_5_price">3.1</string>
+    <string name="title_activity_select_action">SelectActionActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_unwind">UnwindActivity</string>
+
+
 </resources>

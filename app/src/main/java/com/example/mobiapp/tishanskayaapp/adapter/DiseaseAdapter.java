@@ -1,14 +1,23 @@
 package com.example.mobiapp.tishanskayaapp.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mobiapp.tishanskayaapp.R;
+import com.example.mobiapp.tishanskayaapp.classes.Disease;
 import com.example.mobiapp.tishanskayaapp.fragments.DiseaseListFragment;
+
+import java.util.List;
 
 /**
  * Created by mobi app on 03.08.2017.
@@ -16,27 +25,33 @@ import com.example.mobiapp.tishanskayaapp.fragments.DiseaseListFragment;
 public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHolder> implements View.OnClickListener {
 
     private String[] mDataset;
+    List<Disease> list;
 
     DiseaseListFragment fragment;
+    Bitmap bitmap ;
 
     // класс view holder-а с помощью которого мы получаем ссылку на каждый элемент
     // отдельного пункта списка
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // наш пункт состоит только из одного TextView
-        public TextView tvPrice,tvBuy;
+        public TextView tvPrice,tvBuy, tvName, tvDescr;
+        public ImageView img;
 
         public ViewHolder(View v) {
             super(v);
             tvPrice = (TextView) v.findViewById(R.id.card_Price);
             tvBuy = (TextView) v.findViewById(R.id.card_buy);
+            tvName = (TextView) v.findViewById(R.id.card_name);
+            tvDescr = (TextView) v.findViewById(R.id.card_descr);
 
         }
     }
 
     // Конструктор
-    public DiseaseAdapter(String[] dataset, DiseaseListFragment fragment) {
+    public DiseaseAdapter(String[] dataset, DiseaseListFragment fragment, List<Disease> list) {
         mDataset = dataset;
         this.fragment = fragment;
+        this.list = list;
     }
 
     // Создает новые views (вызывается layout manager-ом)
@@ -49,23 +64,36 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
 
         // тут можно программно менять атрибуты лэйаута (size, margins, paddings и др.)
 
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        //ViewHolder vh = new ViewHolder(v);
+        return new ViewHolder(v);
     }
 
     // Заменяет контент отдельного view (вызывается layout manager-ом)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        //holder.mTextView.setText(mDataset[position]);
-        holder.tvBuy.setOnClickListener(this);
+        try {
+            //holder.mTextView.setText(mDataset[position]);
+            if(list.get(position).getPrice()!=null){
+                holder.tvPrice.setText(String.valueOf(list.get(position).getPrice()) + " $");
+                holder.tvBuy.setText(fragment.getResources().getString(R.string.buy_course));
+            }else {
+                holder.tvBuy.setText(fragment.getResources().getString(R.string.description_course));
+                holder.tvPrice.setText(fragment.getResources().getString(R.string.free));
+            }
 
+            holder.tvDescr.setText(list.get(position).getDescription());
+            holder.tvName.setText(list.get(position).getName());
+            holder.tvBuy.setOnClickListener(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     // Возвращает размер данных (вызывается layout manager-ом)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return list.size();
     }
 
     @Override
@@ -76,5 +104,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
                 break;
         }
     }
+
+
 
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.mobiapp.tishanskayaapp.SelectActionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.example.mobiapp.tishanskayaapp.view.CircularView
+        android:id="@+id/circular_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        app:center_color="@android:color/holo_red_dark"
+        app:center_icon="@mipmap/ic_launcher"
+        app:inner_radius="@dimen/inner_radius"
+        app:item_colors="@array/colors"
+        app:item_count="3"
+        app:item_icons="@array/icons"
+        app:item_titles="@array/titles"
+        app:outer_radius="@dimen/outer_radius"
+        app:title_center_size="@dimen/title_center_size"
+        app:title_color="@android:color/white"
+        app:title_padding="@dimen/title_padding"
+        app:title_size="@dimen/title_size" />
+
+
+    <Button
+        android:id="@+id/select_action.test"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_auth"
+        android:text="@string/test"
+        android:textColor="@color/white" />/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,5 +1,9 @@
 package com.example.mobiapp.tishanskayaapp;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,6 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -35,17 +40,21 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, View.OnClickListener {
 
-    private TextView mTextMessage;
+    private static final String APP_PREFERENCES = "config";
+    private static final String APP_PREFERENCES_FIRST = "first";
+    private SharedPreferences mSettings;
+
+    private TextView mTextMessage, textToolbar;
     private SliderLayout mDemoSlider;
     FrameLayout frameLayout;
     private Animation mFadeInAnimation, mFadeOutAnimation;
-    RelativeLayout relPreView, relNext, relIndicatorSlider;
+    RelativeLayout relPreView, relNext, relIndicatorSlider, relToolbar;
     BottomNavigationView navigation;
     private static final String LOG_TAG = "";
     private static Fragment fragment;
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
-
+    private ImageView imgEverest;
 
     TextView tvIndicator1,tvIndicator2,tvIndicator3,tvIndicator4, tvNext;
 
@@ -57,15 +66,22 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     fragment = new CoursesFragment();
+                    textToolbar.setText(getResources().getString(R.string.toolbar_course));
+                    relToolbar.setVisibility(View.VISIBLE);
                     transactionFragment();
                     return true;
                 case R.id.navigation_dashboard:
                     fragment = new DiseaseListFragment();
+                    textToolbar.setText(getResources().getString(R.string.toolbar_disease));
+                    relToolbar.setVisibility(View.VISIBLE);
                     transactionFragment();
                     return true;
                 case R.id.navigation_notifications:
-                    fragment = new AboutFragment();
-                    transactionFragment();
+//                    fragment = new AboutFragment();
+//                    textToolbar.setText(getResources().getString(R.string.toolbar_about));
+//                    relToolbar.setVisibility(View.GONE);
+//                    transactionFragment();
+                    startActivity(new Intent(MainActivity.this,AboutActivity.class));
                     return true;
             }
             return false;
@@ -90,9 +106,14 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        allInit();
-
+        try {
+            allInit();
+            mSettings = this.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+            String first = mSettings.getString(APP_PREFERENCES_FIRST, "");
+            if(Integer.parseInt(first)==1) noFirstRun();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @Override
     protected void onStop() {
@@ -181,27 +202,39 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.relNext:
-                tvNext.setText("ДАЛЕЕ");
-                nextPage();
-                break;
-            case R.id.relPreView:
-                tvNext.setText("ДАЛЕЕ");
-                preViewPage();
-                break;
+        try {
+            switch (view.getId()){
+                case R.id.relNext:
+                    try {
+                        tvNext.setText(getResources().getString(R.string.next));
+                        nextPage();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case R.id.relPreView:
+                    tvNext.setText(getResources().getString(R.string.next));
+                    preViewPage();
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     private void nextPage() {
         // click next page
 
-        int i = mDemoSlider.getCurrentPosition();
-        if(mDemoSlider.getCurrentPosition()!=3) {
-            nextIndicator();
-            mDemoSlider.moveNextPosition();
-        }else {
-            animHideSlider();
+        try {
+            int i = mDemoSlider.getCurrentPosition();
+            if(mDemoSlider.getCurrentPosition()!=3) {
+                nextIndicator();mDemoSlider.moveNextPosition();
+                //animHideSlider();
+            }else {
+                animHideSlider();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -220,16 +253,20 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
         // initialize current indicators (click new page)
 
-        resetIndicator();
-        if(mDemoSlider.getCurrentPosition()==0){
-            relPreView.setVisibility(View.VISIBLE);
-            tvIndicator2.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
-        }else if(mDemoSlider.getCurrentPosition()==1){
-            //relPreView.setVisibility(View.GONE);
-            tvIndicator3.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
-        }else if(mDemoSlider.getCurrentPosition()==2){
-            tvNext.setText("ГОТОВО");
-            tvIndicator4.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
+        try {
+            resetIndicator();
+            if(mDemoSlider.getCurrentPosition()==0){
+                relPreView.setVisibility(View.VISIBLE);
+                tvIndicator2.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
+            }else if(mDemoSlider.getCurrentPosition()==1){
+                //relPreView.setVisibility(View.GONE);
+                tvIndicator3.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
+            }else if(mDemoSlider.getCurrentPosition()==2){
+                tvNext.setText(getResources().getString(R.string.done));
+                tvIndicator4.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -272,17 +309,21 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                 break;
             case 2:
                 tvIndicator3.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
-                tvNext.setText("ДАЛЕЕ");
+                tvNext.setText(getResources().getString(R.string.next));
                 break;
             case 3:
                 tvIndicator4.setBackgroundDrawable(getResources().getDrawable(R.drawable.circle_tv_active));
-                tvNext.setText("ГОТОВО");
+                tvNext.setText(getResources().getString(R.string.done));
                 break;
         }
     }
 
     private void allInit(){
 
+
+        imgEverest = (ImageView) findViewById(R.id.imageView4);
+        textToolbar = (TextView) findViewById(R.id.toolbar_text);
+        relToolbar = (RelativeLayout) findViewById(R.id.relToolbar);
         relIndicatorSlider = (RelativeLayout) findViewById(R.id.relIndicatorSlider);
         frameLayout = (FrameLayout) findViewById(R.id.content);
         mFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein);
@@ -309,6 +350,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         map.add(R.drawable.bimage);
         map.add(R.drawable.cimage);
         map.add(R.drawable.dimage);
+        //map.add(R.drawable.eimage);
 
         for (int name : map) {
             TextSliderView textSliderView = new TextSliderView(this);
@@ -342,6 +384,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     }
 
     private void animHideSlider(){
+        setPrefsFirst();
+        imgEverest.setVisibility(View.GONE);
         frameLayout.startAnimation(mFadeInAnimation);
         navigation.startAnimation(mFadeInAnimation);
         mDemoSlider.startAnimation(mFadeOutAnimation);
@@ -361,5 +405,20 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     @Override
     protected void onPostResume() {
         super.onPostResume();
+    }
+
+    private void setPrefsFirst(){
+        SharedPreferences.Editor editor = mSettings.edit();
+        editor.putString(APP_PREFERENCES_FIRST, "1");
+        editor.apply();
+    }
+
+    private void noFirstRun(){
+        imgEverest.setVisibility(View.GONE);
+        mDemoSlider.setVisibility(View.GONE);
+        relIndicatorSlider.setVisibility(View.GONE);
+        frameLayout.startAnimation(mFadeInAnimation);
+        navigation.startAnimation(mFadeInAnimation);
+
     }
 }

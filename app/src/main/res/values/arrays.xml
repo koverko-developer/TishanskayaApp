@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="icons">
+        <item>@drawable/ic_menu_camera</item>
+        <item>@drawable/ic_menu_gallery</item>
+        <item>@drawable/ic_menu_manage</item>
+        <item>@drawable/ic_menu_share</item>
+        <item>@drawable/ic_menu_share</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/circle_color_2</item>
+        <item>@color/circle_color_3</item>
+        <item>@color/circle_color_1</item>
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_green_light</item>
+    </array>
+
+    <array name="titles">
+        <item>Flash</item>
+        <item>Battery</item>
+        <item>Gps</item>
+        <item>Bluetooth</item>
+        <item>Что нужно</item>
+    </array>
+
+    <array name="titles2">
+        <item>Flash1</item>
+        <item>Battery2</item>
+        <item>Gps22</item>
+        <item>Bluetoot22h</item>
+        <item>Что22 нужно</item>
+    </array>
+
+</resources>

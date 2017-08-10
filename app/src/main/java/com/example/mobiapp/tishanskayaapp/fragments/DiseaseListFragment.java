@@ -1,6 +1,7 @@
 package com.example.mobiapp.tishanskayaapp.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,7 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.mobiapp.tishanskayaapp.R;
+import com.example.mobiapp.tishanskayaapp.SelectActionActivity;
 import com.example.mobiapp.tishanskayaapp.adapter.DiseaseAdapter;
+import com.example.mobiapp.tishanskayaapp.disease.DiseaseGenerate;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,7 +48,12 @@ public class DiseaseListFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(this.getActivity());
         recyclerDisease.setLayoutManager(mLayoutManager);
         // создаем адаптер
-        mAdapter = new DiseaseAdapter(getDataSet(), this);
+        try {
+            DiseaseGenerate generate = new DiseaseGenerate(this.getContext());
+            mAdapter = new DiseaseAdapter(getDataSet(), this,generate.getAllDisease() );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         recyclerDisease.setAdapter(mAdapter);
     }
 
@@ -59,7 +67,7 @@ public class DiseaseListFragment extends Fragment {
     }
 
     public void clickBuy(){
-        Toast.makeText(this.getActivity(), "click buy", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getActivity(), SelectActionActivity.class));
     }
 
 }
