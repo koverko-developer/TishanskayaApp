@@ -25,6 +25,7 @@ public class DiseaseListFragment extends Fragment {
     View v;
     private DiseaseAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    DiseaseGenerate generate;
 
     public DiseaseListFragment() {
         // Required empty public constructor
@@ -49,7 +50,7 @@ public class DiseaseListFragment extends Fragment {
         recyclerDisease.setLayoutManager(mLayoutManager);
         // создаем адаптер
         try {
-            DiseaseGenerate generate = new DiseaseGenerate(this.getContext());
+            generate = new DiseaseGenerate(this.getContext());
             mAdapter = new DiseaseAdapter(getDataSet(), this,generate.getAllDisease() );
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,8 +67,10 @@ public class DiseaseListFragment extends Fragment {
         return mDataSet;
     }
 
-    public void clickBuy(){
-        startActivity(new Intent(getActivity(), SelectActionActivity.class));
+    public void clickBuy(int position){
+        Intent intent = new Intent(getActivity(), SelectActionActivity.class);
+        intent.putExtra("id", position);
+        startActivity(intent);
     }
 
 }

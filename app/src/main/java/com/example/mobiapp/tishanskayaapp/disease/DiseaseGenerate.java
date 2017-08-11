@@ -23,7 +23,7 @@ public class DiseaseGenerate {
 
     private Disease generatePA(){
         Disease disease = new Disease();
-
+        disease.setId(0);
         disease.setName(context.getResources().getString(R.string.pa_name));
         disease.setDescription(context.getResources().getString(R.string.pa_descr));
         //disease.setPrice(Double.valueOf(context.getResources().getString(R.string.pa_price)));
@@ -33,7 +33,7 @@ public class DiseaseGenerate {
 
     private Disease generatePAA(){
         Disease disease = new Disease();
-
+        disease.setId(1);
         disease.setName(context.getResources().getString(R.string.paa_name));
         disease.setDescription(context.getResources().getString(R.string.paa_descr));
         disease.setPrice(Double.valueOf(context.getResources().getString(R.string.paa_price)));
@@ -44,7 +44,7 @@ public class DiseaseGenerate {
 
     private Disease generateSEX(){
         Disease disease = new Disease();
-
+        disease.setId(2);
         disease.setName(context.getResources().getString(R.string.sex_name));
         disease.setDescription(context.getResources().getString(R.string.sex_descr));
         disease.setPrice(Double.valueOf(context.getResources().getString(R.string.sex_price)));
@@ -54,7 +54,7 @@ public class DiseaseGenerate {
 
     private Disease generateDIPRESSIA(){
         Disease disease = new Disease();
-
+        disease.setId(3);
         disease.setName(context.getResources().getString(R.string.depressia_name));
         disease.setDescription(context.getResources().getString(R.string.depressia_descr));
         //disease.setPrice(Double.valueOf(context.getResources().getString(R.string.depressia_price)));
@@ -64,7 +64,7 @@ public class DiseaseGenerate {
 
     private Disease generateMONO(){
         Disease disease = new Disease();
-
+        disease.setId(4);
         disease.setName(context.getResources().getString(R.string.mono_name));
         disease.setDescription(context.getResources().getString(R.string.mono_descr));
         //disease.setPrice(Double.valueOf(context.getResources().getString(R.string.mono_price)));

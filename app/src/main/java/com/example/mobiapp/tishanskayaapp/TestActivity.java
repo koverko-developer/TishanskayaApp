@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -38,6 +39,9 @@ public class TestActivity extends AppCompatActivity {
         try {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+            getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
             GenerateQuest generateQuest = new GenerateQuest(this);
             list = generateQuest.questsPA();
@@ -85,6 +89,18 @@ public class TestActivity extends AppCompatActivity {
             Toast.makeText(this, "End test", Toast.LENGTH_SHORT).show();}
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                // do what you want to be done on home button click event
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

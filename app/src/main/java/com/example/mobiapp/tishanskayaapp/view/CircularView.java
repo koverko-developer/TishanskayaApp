@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
@@ -79,6 +80,10 @@ public class CircularView extends View {
         mSweepAngle = TOTAL_DEGREE / mItemCount;
         mColors = getResources().getIntArray(colorsResId);
         mCenterIcon = BitmapFactory.decodeResource(getResources(), centerIconResId);
+//        Matrix matrix = new Matrix();
+//        matrix.postScale(1, 1);
+//
+//        mCenterIcon = Bitmap.createBitmap(mCenterIcon, 0, 0, mCenterIcon.getWidth()/2, mCenterIcon.getHeight()/2, matrix, true);
         mTitles = getResources().getStringArray(namesResId);
         TypedArray icons = getResources().obtainTypedArray(iconsResId);
 
@@ -151,14 +156,17 @@ public class CircularView extends View {
         mPaint.setTextSize(mTitleCenterSize);
 
 
+
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(5);
         mPaint.setColor(Color.WHITE);
         canvas.drawCircle(width / 2, height / 2, mInnerRadius, mPaint);
-
-        //canvas.drawText("СТОП", (width / 2)-50, height / 2, mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(1);
+        mPaint.setTextSize(mTitleCenterSize);
+        //canvas.drawText("СТОП", (width / 2)-80, (height / 2)+10, mPaint);
         //canvas.drawText("ПА", (width / 2)-20, (height / 2)+40, mPaint);
-        //canvas.drawBitmap(mCenterIcon, width / 2 - mCenterIcon.getWidth() / 2, height / 2 - mCenterIcon.getHeight() / 2, null);
+        canvas.drawBitmap(mCenterIcon, width / 2 - mCenterIcon.getWidth() / 2, height / 2 - mCenterIcon.getHeight() / 2,null);
 
         super.onDraw(canvas);
     }

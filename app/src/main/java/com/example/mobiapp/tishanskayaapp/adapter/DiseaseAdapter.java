@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by mobi app on 03.08.2017.
  */
-public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHolder> implements View.OnClickListener {
+public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHolder> {
 
     private String[] mDataset;
     List<Disease> list;
@@ -70,7 +70,7 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
 
     // Заменяет контент отдельного view (вызывается layout manager-ом)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
         try {
             //holder.mTextView.setText(mDataset[position]);
@@ -84,7 +84,12 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
 
             holder.tvDescr.setText(list.get(position).getDescription());
             holder.tvName.setText(list.get(position).getName());
-            holder.tvBuy.setOnClickListener(this);
+            holder.tvBuy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    fragment.clickBuy(position);
+                }
+            });
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -94,15 +99,6 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
     @Override
     public int getItemCount() {
         return list.size();
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.card_buy:
-                fragment.clickBuy();
-                break;
-        }
     }
 
 

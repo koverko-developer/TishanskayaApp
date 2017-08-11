@@ -5,11 +5,19 @@ package com.example.mobiapp.tishanskayaapp.classes;
  */
 
 public class Disease {
-
+    int id;
     String name;
     String description;
     Double price;
     String textClick;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getDescription() {
         return description;

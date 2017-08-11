@@ -67,8 +67,9 @@ public class UnwindActivity extends AppCompatActivity implements View.OnClickLis
             currentPosition++;
         }else {
             isDone = true;
-            scratchView.setVisibility(View.VISIBLE);
             imageView.setVisibility(View.VISIBLE);
+            scratchView.setVisibility(View.VISIBLE);
+
             button.setText(getResources().getString(R.string.done));
             text.setVisibility(View.GONE);
             title.setText(getResources().getString(R.string.unwind_text_end));

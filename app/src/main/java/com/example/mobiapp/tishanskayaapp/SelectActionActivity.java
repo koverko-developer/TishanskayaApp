@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.mobiapp.tishanskayaapp.classes.Disease;
+import com.example.mobiapp.tishanskayaapp.disease.DiseaseGenerate;
 import com.example.mobiapp.tishanskayaapp.view.CircularView;
 import com.example.mobiapp.tishanskayaapp.view.ScratchView;
 
@@ -30,6 +32,12 @@ public class SelectActionActivity extends AppCompatActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Intent intent = getIntent();
+        int id = intent.getIntExtra("id",0);
+
+        DiseaseGenerate generate = new DiseaseGenerate(this);
+
+        getSupportActionBar().setTitle(generate.getAllDisease().get(id).getName());
 
         btnTest = (Button) findViewById(R.id.select_action_test);
 

@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="false"
         android:layout_centerVertical="false"
         app:center_color="@android:color/holo_red_dark"
-        app:center_icon="@mipmap/ic_launcher"
+        app:center_icon="@drawable/stop"
         app:inner_radius="@dimen/inner_radius"
         app:item_colors="@array/colors"
         app:item_count="3"

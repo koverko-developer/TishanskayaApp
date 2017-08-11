@@ -53,17 +53,6 @@
         android:alpha="0.5"
         android:background="@android:color/transparent"
         android:visibility="visible">
-
-
-        <com.andexert.library.RippleView
-            android:id="@+id/more44"
-            rv_centered="true"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp">
-
             <RelativeLayout
                 android:id="@+id/relPreView"
                 android:layout_width="100dp"
@@ -87,18 +76,7 @@
                     android:textColor="@android:color/background_light"
                     android:textSize="16sp" />
             </RelativeLayout>
-        </com.andexert.library.RippleView>
 
-        <com.andexert.library.RippleView
-            android:id="@+id/more"
-            rv_centered="true"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_toLeftOf="@+id/more2">
 
             <RelativeLayout
                 android:id="@+id/relNext"
@@ -125,10 +103,6 @@
                     android:textColor="@android:color/background_light"
                     android:textSize="16sp" />
             </RelativeLayout>
-
-        </com.andexert.library.RippleView>
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -213,16 +187,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-
-                <com.andexert.library.RippleView
-                    android:id="@+id/more.course"
-                    rv_centered="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:rv_centered="true">
-
-                </com.andexert.library.RippleView>
-
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -256,15 +220,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-
-                <com.andexert.library.RippleView
-                    android:id="@+id/more.disease"
-                    rv_centered="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:rv_centered="true">
-
-                </com.andexert.library.RippleView>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -303,16 +258,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-
-                <com.andexert.library.RippleView
-                    android:id="@+id/more.about"
-                    rv_centered="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:rv_centered="true">
-
-                </com.andexert.library.RippleView>
-
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
