@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView11"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/imageView11"
+            android:layout_toRightOf="@+id/imageView11"
+            android:text="Выберите симптомы:"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginBottom="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+                <com.example.mobiapp.tishanskayaapp.view.DiseaseView
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </com.example.mobiapp.tishanskayaapp.view.DiseaseView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/select_disease.btn_next"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_auth"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

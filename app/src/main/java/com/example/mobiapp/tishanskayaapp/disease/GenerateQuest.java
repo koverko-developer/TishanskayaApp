@@ -2,6 +2,7 @@ package com.example.mobiapp.tishanskayaapp.disease;
 
 import android.content.Context;
 
+import com.example.mobiapp.tishanskayaapp.R;
 import com.example.mobiapp.tishanskayaapp.classes.Quest;
 
 import java.util.ArrayList;
@@ -22,12 +23,25 @@ public class GenerateQuest {
     public List<Quest> questsPA(){
         List<Quest> list = new ArrayList<>();
 
-        list.add(new Quest(0, "Вопрос 1","Ответ 1", "Ответ 2", 1, 2, -1));
-        list.add(new Quest(1, "Вопрос 2","Ответ 1", "Ответ 2", 2, 5, 0));
-        list.add(new Quest(2, "Вопрос 3","Ответ 1", "Ответ 2", 3, 4, 1));
-        list.add(new Quest(3, "Вопрос 4","Ответ 1", "Ответ 2", 5, 999,2));
-        list.add(new Quest(4, "Вопрос 5","Ответ 1", "Ответ 2", 999, 999, 2));
-        list.add(new Quest(5, "Вопрос 6","Ответ 1", "Ответ 2", 999, 999, 1));
+        list.add(new Quest(0, context.getResources().getString(R.string.simptom1),
+                context.getResources().getString(R.string.simptom1_1),
+                context.getResources().getString(R.string.simptom1_2),
+                context.getResources().getString(R.string.simptom1_3),1, 203,202, -1));
+
+        list.add(new Quest(1, context.getResources().getString(R.string.simptom2),
+                context.getResources().getString(R.string.simptom_yes),
+                context.getResources().getString(R.string.simptom_no),null,201, 202,0, 0));
+
+        list.add(new Quest(2, context.getResources().getString(R.string.simptom3),
+                context.getResources().getString(R.string.simptom_yes),
+                context.getResources().getString(R.string.simptom_no),
+                null,0, 0,0, -1));
+
+//        list.add(new Quest(0, context.getResources().getString(R.string.simptom1),
+//                context.getResources().getString(R.string.simptom1_1),
+//                context.getResources().getString(R.string.simptom1_2),
+//                context.getResources().getString(R.string.simptom1_3),0, 0,0, -1));
+
 
         return list;
     }

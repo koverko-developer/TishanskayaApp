@@ -10,10 +10,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.mobiapp.tishanskayaapp.R;
 import com.example.mobiapp.tishanskayaapp.SelectActionActivity;
+import com.example.mobiapp.tishanskayaapp.TestActivity;
 import com.example.mobiapp.tishanskayaapp.adapter.DiseaseAdapter;
 import com.example.mobiapp.tishanskayaapp.disease.DiseaseGenerate;
 
@@ -42,6 +45,15 @@ public class DiseaseListFragment extends Fragment {
     }
 
     private void setRecyclerCiew(){
+
+        RelativeLayout button = (RelativeLayout) v.findViewById(R.id.disease_rel);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), TestActivity.class));
+            }
+        });
+
         RecyclerView recyclerDisease = (RecyclerView) v.findViewById(R.id.recyclerDisease);
         recyclerDisease.setHasFixedSize(true);
 

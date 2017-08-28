@@ -97,7 +97,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.card_buy:
-                fragment.clickBuy();
+                //fragment.clickBuy();
                 break;
         }
     }

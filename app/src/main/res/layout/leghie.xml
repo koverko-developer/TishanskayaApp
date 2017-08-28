@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+   <com.example.mobiapp.tishanskayaapp.view.fillableloaders.FillableLoader
+       android:layout_width="150dp"
+       android:layout_height="150dp"
+       android:id="@+id/fillableLoader"
+       app:fl_originalWidth="550"
+       app:fl_originalHeight="550"
+       app:fl_strokeColor="@color/cardview_dark_background"
+       app:fl_fillColor="@color/colorPrimary"
+       app:fl_strokeWidth="2dp"
+       app:fl_strokeDrawingDuration="1"
+       app:fl_fillDuration="7000"
+       app:fl_clippingTransform="waves"/>
+</RelativeLayout>

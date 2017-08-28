@@ -10,17 +10,21 @@ public class Quest {
     String title;
     String ansver1;
     String ansver2;
+    String ansver3;
     int nextQuestAnswer1;
     int nextQuestAnswer2;
+    int nextQuestAnswer3;
     int predQuest;
 
-    public Quest(int id, String title, String ansver1, String ansver2, int nextQuestAnswer1, int nextQuestAnswer2, int predQuest) {
+    public Quest(int id, String title, String ansver1, String ansver2, String ansver3, int nextQuestAnswer1, int nextQuestAnswer2,int nextQuestAnswer3, int predQuest) {
         this.id = id;
         this.title = title;
         this.ansver1 = ansver1;
         this.ansver2 = ansver2;
+        this.ansver3 = ansver3;
         this.nextQuestAnswer1 = nextQuestAnswer1;
         this.nextQuestAnswer2 = nextQuestAnswer2;
+        this.nextQuestAnswer3 = nextQuestAnswer3;
         this.predQuest = predQuest;
     }
 
@@ -78,5 +82,21 @@ public class Quest {
 
     public void setPredQuest(int predQuest) {
         this.predQuest = predQuest;
+    }
+
+    public String getAnsver3() {
+        return ansver3;
+    }
+
+    public void setAnsver3(String ansver3) {
+        this.ansver3 = ansver3;
+    }
+
+    public int getNextQuestAnswer3() {
+        return nextQuestAnswer3;
+    }
+
+    public void setNextQuestAnswer3(int nextQuestAnswer3) {
+        this.nextQuestAnswer3 = nextQuestAnswer3;
     }
 }

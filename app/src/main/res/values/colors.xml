@@ -15,5 +15,7 @@
     <color name="circle_color_2">#f8c26f</color>
     <color name="circle_color_3">#b5f18c</color>
     <color name="circle_center">#ff0844</color>
+    <color name="gradient_color">#23e7f7</color>
+    <color name="bg_select_disease">#fafafa</color>
 
 </resources>
