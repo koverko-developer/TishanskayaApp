@@ -13,6 +13,15 @@
         android:background="@color/white"
         android:visibility="visible">
 
+        <ImageView
+            android:id="@+id/card.img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/cimage" />
+
         <TextView
             android:id="@+id/card.text"
             android:layout_width="wrap_content"
@@ -31,7 +40,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="16dp"
-            android:enabled="false" />
+            android:enabled="true"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout

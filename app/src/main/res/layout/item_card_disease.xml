@@ -47,7 +47,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="60dp"
                         android:text="Панические атаки"
                         android:textColor="@color/cardview_dark_background"
                         android:textSize="18sp" />
@@ -60,7 +59,8 @@
                         android:layout_centerVertical="true"
                         android:layout_gravity="right"
                         android:text="1.99$"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:visibility="gone" />
                 </RelativeLayout>
 
                 <TextView
@@ -88,7 +88,7 @@
             android:layout_height="16dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            app:srcCompat="@mipmap/ic_launcher_list" />
+            app:srcCompat="@drawable/ic_home_blue" />
     </RelativeLayout>
 
     <LinearLayout

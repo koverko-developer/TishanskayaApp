@@ -1,7 +1,6 @@
 package com.example.mobiapp.tishanskayaapp.fragments;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mobiapp.tishanskayaapp.R;
@@ -24,6 +24,7 @@ public class FragmentSelectDisease extends Fragment implements View.OnClickListe
 
     View v;
     DiseaseView view1, view2, view3,view4,view5,view6,view7,view8,view9,view10,view11,view12;
+    TextView tv_col;
     int count = 0;
     Button btn_next;
 
@@ -45,42 +46,50 @@ public class FragmentSelectDisease extends Fragment implements View.OnClickListe
 
     private void init(){
         view1 = (DiseaseView) v.findViewById(R.id.view1);
-        view1.setImage(this.getResources().getDrawable(R.drawable.telka2));
+        view1.setImage(R.drawable.telka6);
         view1.setText("Сложно сделать глубокий вдох или выдох.");
 
         view2 = (DiseaseView) v.findViewById(R.id.view2);
         view2.setText("Головокружение, непостоянство ощущений или усталость.");
 
         view3 = (DiseaseView) v.findViewById(R.id.view3);
+        view3.setImage(R.drawable.telka9);
         view3.setText("Усиление скорости сердечных сокращений (тахикардия).");
 
         view4 = (DiseaseView) v.findViewById(R.id.view4);
+        view4.setImage(R.drawable.telka4);
         view4.setText("Дрожание или покачивание.");
 
         view5 = (DiseaseView) v.findViewById(R.id.view5);
-        view5.setImage(this.getResources().getDrawable(R.drawable.telka2));
+        view5.setImage(R.drawable.telka2);
         view5.setText("Потливость.");
 
         view6 = (DiseaseView) v.findViewById(R.id.view6);
+        view6.setImage(R.drawable.telka7);
         view6.setText("Удушье.");
 
         view7 = (DiseaseView) v.findViewById(R.id.view7);
-        view7.setText("Тошнота или дискамфорт в желудке.");
+        view7.setImage(R.drawable.telka8);
+        view7.setText("Тошнота или дискомфорт в желудке.");
 
         view8 = (DiseaseView) v.findViewById(R.id.view8);
+        view8.setImage(R.drawable.telka10);
         view8.setText("Непонимание кто я и где я нахожусь в настоящее время.");
 
         view9 = (DiseaseView) v.findViewById(R.id.view9);
+        view9.setImage(R.drawable.telka11);
         view9.setText("Онемение или покалывание.");
 
         view10 = (DiseaseView) v.findViewById(R.id.view10);
+        view10.setImage(R.drawable.telka5);
         view10.setText("Покраснение (отсутствие покраснения лица), гусиная кожа.");
 
         view11 = (DiseaseView) v.findViewById(R.id.view11);
+        view11.setImage(R.drawable.telka12);
         view11.setText("Боль или дискомфорт в груди.");
 
         view12 = (DiseaseView) v.findViewById(R.id.view12);
-        view12.setImage(this.getResources().getDrawable(R.drawable.telka3));
+        view12.setImage(R.drawable.telka3);
         view12.setText("Страх смерти.");
 
         view1.setOnClickListener(this);
@@ -96,7 +105,7 @@ public class FragmentSelectDisease extends Fragment implements View.OnClickListe
         view11.setOnClickListener(this);
         view12.setOnClickListener(this);
 
-        btn_next = (Button) v.findViewById(R.id.select_disease_btn_next);
+        btn_next = (Button) v.findViewById(R.id.description_btn);
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,6 +116,8 @@ public class FragmentSelectDisease extends Fragment implements View.OnClickListe
                 else Toast.makeText(v.getContext(), v.getResources().getString(R.string.toast_error_test), Toast.LENGTH_SHORT).show();
             }
         });
+
+        tv_col = (TextView) v.findViewById(R.id.tv_col_simptoms);
     }
 
     @Override
@@ -155,5 +166,7 @@ public class FragmentSelectDisease extends Fragment implements View.OnClickListe
     private void counter(boolean b){
         if(b) count++;
         else count--;
+
+        tv_col.setText(count+" из 12");
     }
 }

@@ -36,7 +36,7 @@ public class DiseaseGenerate {
         disease.setId(1);
         disease.setName(context.getResources().getString(R.string.paa_name));
         disease.setDescription(context.getResources().getString(R.string.paa_descr));
-        disease.setPrice(Double.valueOf(context.getResources().getString(R.string.paa_price)));
+        //disease.setPrice(Double.valueOf(context.getResources().getString(R.string.paa_price)));
 
         return disease;
     }
@@ -47,7 +47,7 @@ public class DiseaseGenerate {
         disease.setId(2);
         disease.setName(context.getResources().getString(R.string.sex_name));
         disease.setDescription(context.getResources().getString(R.string.sex_descr));
-        disease.setPrice(Double.valueOf(context.getResources().getString(R.string.sex_price)));
+        //disease.setPrice(Double.valueOf(context.getResources().getString(R.string.sex_price)));
 
         return disease;
     }
@@ -76,7 +76,7 @@ public class DiseaseGenerate {
         List<Disease> list = new ArrayList<>();
         list.add(generatePA());
         list.add(generatePAA());
-        list.add(generateSEX());
+        //list.add(generateSEX());
         list.add(generateDIPRESSIA());
         list.add(generateMONO());
 

@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
                     transactionFragment();
                     return true;
                 case R.id.navigation_notifications:
-//                    fragment = new AboutFragment();
-//                    textToolbar.setText(getResources().getString(R.string.toolbar_about));
-//                    relToolbar.setVisibility(View.GONE);
-//                    transactionFragment();
-                    startActivity(new Intent(MainActivity.this,AboutActivity.class));
+                    fragment = new AboutFragment();
+                    textToolbar.setText(getResources().getString(R.string.toolbar_about));
+                    //relToolbar.setVisibility(View.GONE);
+                    transactionFragment();
+                    //startActivity(new Intent(MainActivity.this,AboutActivity.class));
                     return true;
             }
             return false;

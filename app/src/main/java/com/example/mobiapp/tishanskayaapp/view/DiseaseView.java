@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.mobiapp.tishanskayaapp.R;
 
 /**
@@ -55,8 +56,9 @@ public class DiseaseView extends RelativeLayout {
        }
     }
 
-    public void setImage(Drawable drawable){
-        img_logo.setImageDrawable(drawable);
+    public void setImage(int drawable){
+        Glide.with(this).load(drawable).into(img_logo);
+        //img_logo.setImageDrawable(drawable);
     }
     public void setText(String tex){
         text.setText(tex);

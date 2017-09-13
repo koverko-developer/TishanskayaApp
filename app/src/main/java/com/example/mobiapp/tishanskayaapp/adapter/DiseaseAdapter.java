@@ -82,7 +82,8 @@ public class DiseaseAdapter extends RecyclerView.Adapter<DiseaseAdapter.ViewHold
                 holder.tvPrice.setText(fragment.getResources().getString(R.string.free));
             }
 
-            holder.tvDescr.setText(list.get(position).getDescription());
+            if(list.get(position).getDescription().length()<150) holder.tvDescr.setText(list.get(position).getDescription());
+            else holder.tvDescr.setText(list.get(position).getDescription().substring(0,145)+"...");
             holder.tvName.setText(list.get(position).getName());
             holder.tvBuy.setOnClickListener(new View.OnClickListener() {
                 @Override

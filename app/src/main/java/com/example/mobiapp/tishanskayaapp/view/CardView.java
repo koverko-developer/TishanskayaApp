@@ -18,6 +18,7 @@ public class CardView extends RelativeLayout {
     TextView tv;
     RadioButton rb;
     RelativeLayout rel;
+    ImageView img;
 
     public CardView(Context context) {
         super(context);
@@ -39,6 +40,7 @@ public class CardView extends RelativeLayout {
         this.tv = (TextView) findViewById(R.id.card_text);
         this.rel = (RelativeLayout) findViewById(R.id.card_rel);
         this.rb = (RadioButton) findViewById(R.id.card_radio);
+        this.img = (ImageView) findViewById(R.id.card_img);
     }
 
     public void setText(String txt){
@@ -49,20 +51,24 @@ public class CardView extends RelativeLayout {
         if(rb.isChecked()) {
             rb.setChecked(false);
             rel.setBackgroundColor(getResources().getColor(R.color.cardview_dark_background));
+            img.setImageDrawable(getResources().getDrawable(R.drawable.cimage));
             return true;
         }else {
             rb.setChecked(true);
             rel.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            img.setImageDrawable(getResources().getDrawable(R.drawable.circle_button));
             return false;
         }
     }
 
     public void setChecked(){
+        img.setImageDrawable(getResources().getDrawable(R.drawable.circle_button));
         rb.setChecked(true);
         rel.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
     }
 
     public void dontChecked(){
+        img.setImageDrawable(getResources().getDrawable(R.drawable.cimage));
         rb.setChecked(false);
         rel.setBackgroundColor(getResources().getColor(R.color.cardview_dark_background));
     }

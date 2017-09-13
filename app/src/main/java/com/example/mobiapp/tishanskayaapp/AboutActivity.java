@@ -53,8 +53,6 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             img8 = (ImageView) findViewById(R.id.about_8);
             img9 = (ImageView) findViewById(R.id.about_9);
             img10 = (ImageView) findViewById(R.id.about_10);
-            about_phone = (LinearLayout) findViewById(R.id.about_phone);
-            about_email = (LinearLayout) findViewById(R.id.about_email);
 
             imgMain = (ImageView) findViewById(R.id.main_backdrop);
             Glide.with(this).load(R.drawable.photo_psiholog).into(imgMain);
@@ -81,25 +79,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View view) {
                 tvDescription.setText(getResources().getString(R.string.about_text_4));
+                tvAllDescr.setVisibility(View.GONE);
             }
         });
 
-        try {
-            about_phone.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    call();
-                }
-            });
-            about_email.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    sendEmail();
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
 

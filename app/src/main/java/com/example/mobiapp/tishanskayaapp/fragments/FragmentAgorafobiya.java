@@ -1,6 +1,7 @@
 package com.example.mobiapp.tishanskayaapp.fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.mobiapp.tishanskayaapp.DescriptionActivity;
 import com.example.mobiapp.tishanskayaapp.R;
 import com.example.mobiapp.tishanskayaapp.TestActivity;
 import com.example.mobiapp.tishanskayaapp.view.CardView;
@@ -86,7 +88,9 @@ public class FragmentAgorafobiya extends Fragment implements View.OnClickListene
         int i = position;
         switch (position){
             case 1:
-                Toast.makeText(activity, "Агорафобия без Панических атак.", Toast.LENGTH_SHORT).show();
+                Intent intent= new Intent(activity, DescriptionActivity.class);
+                intent.putExtra("id",3);
+                startActivity(intent);
                 break;
             case 2:
                 Toast.makeText(activity, "Возможно ваше состояние имеет какой-либо органический фактор, обратитесь пожалуйста к вашему врачу.", Toast.LENGTH_SHORT).show();
